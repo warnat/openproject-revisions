@@ -17,6 +17,7 @@ module OpenProject::Revisions
       if code != 0
         error_msg = "Non-zero exit code #{code} for `#{command} #{params.join(" ")}`"
         logger.error(error_msg)
+        logger.debug("Error output is #{err}")
         raise ShellError.new(command, error_msg)
       end
 

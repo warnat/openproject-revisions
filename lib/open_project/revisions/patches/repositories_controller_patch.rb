@@ -24,7 +24,11 @@ module OpenProject::Revisions
             @repository.project = @project if @repository
           end
 
+          # Allow plugins to modify requests (i.e., set repo URL)
+          call_hook(:repository_edit_request, :repository => @repository)
+
           edit_without_revisions(&block)
+
           if request.post? && !@repository.errors.any?
             call_hook(:repository_edited, :repository => @repository)
           end

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = "Oliver Günther"
   s.email       = "mail@oliverguenther.de"
   s.homepage    = "https://www.github.com/oliverguenther/openproject-revisions"
-  s.summary     = 'OpenProject Revisions/Base'
+  s.summary     = 'Revisions/Base'
   s.description = "This plugin provides a basis for integrating revision control management approaches into OpenProject."
   s.license     = "MIT"
 
